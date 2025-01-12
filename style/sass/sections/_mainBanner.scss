@@ -1,0 +1,72 @@
+.mainBanner-parent {
+  min-height: 787px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @include max-768 {
+    min-height: 100vh;
+  }
+  .mainbanner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.banner-desc {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 570px;
+  @include max-992 {
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  .main-title {
+    font-size: 57px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+    @include max-1200 {
+      font-size: 45px;
+    }
+    @include max-768 {
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+   
+  }
+  .main-btn {
+    min-width: 253px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #fff;
+    font-size: 26px;
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+    // transition: all linear 0.2s;
+    @include max-768 {
+      min-width: unset;
+      padding-inline: 35px;
+      font-size: 22px;
+      height: 55px;
+    }
+    &:hover {
+      // background-color: #000;
+      color: #fff;
+    }
+  }
+}

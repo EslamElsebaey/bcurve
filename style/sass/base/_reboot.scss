@@ -1,0 +1,180 @@
+// Variables
+$main-color: #ed348c;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html[dir="rtl"] {
+  body {
+    font-family: "SF Arabic";
+  }
+}
+html[dir="ltr"] {
+  body {
+    font-family: "SFCompactDisplay";
+  }
+}
+body {
+  margin: 0;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+  &.overflowVisible {
+    overflow: visible;
+  }
+  &.overflowHidden {
+    overflow: hidden;
+  }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  margin: 0;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+a,
+button {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+  // background-color: #f2f2f2;
+  background-color: #efefef;
+}
+
+
+
+
+// Scroll up
+.toTopBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all linear 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  &::after {
+    content: "";
+    position: absolute;
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    background-color: $main-color;
+    z-index: -1;
+    transition: all linear 0.2s;
+    border-radius: 50%;
+  }
+  &:hover {
+    .icon {
+      color: #fff;
+    }
+    &::after {
+      transform: scale(1);
+    }
+  }
+  @include max-768 {
+    width: 35px;
+    height: 35px;
+  }
+  .icon {
+    font-size: 16px;
+    color: $main-color;
+    transition: all linear 0.2s;
+    @include max-768 {
+      font-size: 14px;
+    }
+  }
+}
+
+.showToTop {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container {
+  width: 100%;
+  padding-inline: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include min-576 {
+    max-width: 540px;
+  }
+  @include min-768 {
+    max-width: 720px;
+  }
+  @include min-992 {
+    max-width: 960px;
+  }
+  @include min-1200 {
+    max-width: 1170px;
+  }
+  @include min-1400 {
+    max-width: 1350px;
+  }
+  @include max-768 {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

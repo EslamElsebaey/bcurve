@@ -1,0 +1,44 @@
+.brands {
+  padding: 25px 0;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.149);
+  direction: ltr;
+  @include max-768 {
+    padding: 20px 0;
+  }
+}
+// .brands-wrapper {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 60px;
+//   flex-wrap: nowrap;
+// }
+
+.horizontal-marquee-inner {
+  gap: 60px;
+  margin: 0 30px;
+  @include max-768 {
+    gap: 40px;
+    margin: 0 20px;
+  }
+}
+
+.brand-item {
+  // width: 100%;
+  // flex: 1;
+  // flex: 1;
+  &:hover {
+    img {
+      filter: unset;
+    }
+  }
+  img {
+    // max-width: 100%;
+    // width: 100%;
+    width: auto;
+    max-width: 125px;
+    object-fit: contain;
+    transition: filter ease-in-out 0.2s;
+    filter: grayscale(100%);
+  }
+}

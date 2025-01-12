@@ -1,0 +1,40 @@
+.fixed-header {
+  z-index: 100;
+  // border-bottom: 1px solid #e6e6e6;
+  background-color: rgba(255, 255, 255, 0.75) ;
+  backdrop-filter: blur(10px);
+  .logo img {
+    filter: invert(100%);
+  }
+  .download-btn {
+    background-color: #000;
+    color: #fff;
+    &.btn-hover {
+      &::before {
+        background-color: $main-color;
+      }
+    }
+  }
+  .language {
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    &:hover{
+      background-color: transparent;
+    }
+  }
+  .open-nav-btn .bars-icon {
+    color: #000;
+  }
+  .header-content {
+    padding: 15px 0;
+    @include max-768 {
+      padding: 15px 0;
+    }
+  }
+  .big-menu > li > a,
+  .language .icon {
+    color: #000;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}

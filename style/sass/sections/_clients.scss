@@ -1,0 +1,134 @@
+.clients {
+  padding-bottom: 140px;
+  @include max-768 {
+    padding-bottom: 70px;
+  }
+}
+.client-item {
+  @include max-768 {
+    text-align: center;
+  }
+}
+.clients-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 65px;
+  @include max-992 {
+    grid-template-columns: 1fr;
+  }
+  @include max-768 {
+    row-gap: 35px;
+  }
+}
+
+.client-title {
+  font-size: 48px;
+  color: #000000;
+  font-weight: 300;
+  text-align: start;
+  margin-bottom: 30px;
+  position: relative;
+  transition: all linear 0.2s;
+  text-transform: capitalize;
+  @include max-768 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+    // color: $main-color;
+    // transform: translateY(-5px);
+    color: $main-color;
+    transform: scale(1.05);
+    &::after {
+      // background-color: $main-color;
+      height: 4px;
+      background-color: $main-color;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: all linear 0.2s;
+  }
+}
+
+.client-img-anchor {
+  width: 100%;
+  // aspect-ratio: 1;
+  display: flex;
+  overflow: hidden;
+  .client-img {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    aspect-ratio: 645 / 450;
+  }
+  &:hover {
+    .client-img {
+      transform: rotate(2deg) scale(1.1);
+    }
+  }
+}
+
+.client-anchors {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  @include max-768 {
+    margin-top: 20px;
+    justify-content: center;
+    gap: 12px;
+  }
+  .anchor {
+    height: 45px;
+    border-radius: 23px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 22px;
+    transition: all linear 0.2s;
+    @include max-768 {
+      height: 42px;
+      font-size: 18px;
+      padding-inline: 20px;
+    }
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+      border-color: $main-color;
+      box-shadow: 0 0 0 5px #ed348c5f;
+    }
+  }
+}
+
+// Lazy load
+
+.loading-img {
+  overflow: hidden;
+  img {
+    opacity: 0 !important;
+    filter: blur(40px);
+  }
+}
+
+.loaded-img {
+  img {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+// Lazy load
