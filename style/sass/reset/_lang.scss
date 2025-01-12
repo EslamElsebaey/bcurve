@@ -12,9 +12,9 @@ html[dir="ltr"] {
   @include max-768 {
     .stat-item {
       padding-inline: 10px;
+      justify-content: center;
       .text {
         line-height: 1.2;
-        font-size: 18px;
       }
     }
     .advantage-item .title-desc {
