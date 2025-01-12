@@ -28,6 +28,10 @@
   justify-content: flex-start;
   position: relative;
   width: 18.7%;
+  position: relative;
+  .fixed-logo {
+    display: none;
+  }
   @include max-1200 {
     width: auto;
   }
@@ -154,7 +158,7 @@ html[dir="rtl"] {
   @include max-992 {
     flex-direction: column;
     margin: 65px 0 0 0;
-    align-items: flex-start;
+    align-items: center;
     row-gap: 20px;
   }
   > li > a {

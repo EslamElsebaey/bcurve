@@ -2,6 +2,9 @@ html[dir="ltr"] {
   .banner-desc .main-title {
     line-height: 1.2;
   }
+  .banner-desc{
+    max-width: 660px;
+  }
   .stat-item {
     justify-content: flex-start;
     gap: 10px;
@@ -19,9 +22,6 @@ html[dir="ltr"] {
     }
     .advantage-item .title-desc {
       line-height: 1.5;
-    }
-    .tasawk {
-      font-size: 14px;
     }
   }
 }

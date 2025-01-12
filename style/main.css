@@ -313,6 +313,10 @@ button:focus {
   justify-content: flex-start;
   position: relative;
   width: 18.7%;
+  position: relative;
+}
+.logo .fixed-logo {
+  display: none;
 }
 @media only screen and (max-width: 1199px) {
   .logo {
@@ -457,7 +461,7 @@ html[dir=rtl] .language {
   .big-menu {
     flex-direction: column;
     margin: 65px 0 0 0;
-    align-items: flex-start;
+    align-items: center;
     row-gap: 20px;
   }
 }
@@ -575,6 +579,7 @@ html[dir=rtl] .language {
   font-weight: 700;
   text-align: center;
   margin-bottom: 45px;
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1199px) {
   .banner-desc .main-title {
@@ -593,7 +598,7 @@ html[dir=rtl] .language {
   border-radius: 30px;
   background-color: #fff;
   font-size: 26px;
-  padding-inline: 20px;
+  padding-inline: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -603,7 +608,6 @@ html[dir=rtl] .language {
 @media only screen and (max-width: 767px) {
   .banner-desc .main-btn {
     min-width: unset;
-    padding-inline: 35px;
     font-size: 22px;
     height: 55px;
   }
@@ -762,6 +766,7 @@ html[dir=rtl] .language {
   position: relative;
   transition: all linear 0.2s;
   text-transform: capitalize;
+  display: inline-block;
 }
 @media only screen and (max-width: 767px) {
   .client-title {
@@ -1220,7 +1225,7 @@ html[dir=rtl] .input[type=tel] {
   font-weight: 300;
 }
 .tasawk img {
-  margin: 0 5px;
+  margin: 0 4px;
 }
 
 .fixed-header {
@@ -1229,8 +1234,18 @@ html[dir=rtl] .input[type=tel] {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-.fixed-header .logo img {
-  filter: invert(100%);
+.fixed-header .fixed-logo {
+  display: block;
+  width: 180px;
+}
+@media only screen and (max-width: 767px) {
+  .fixed-header .fixed-logo {
+    width: 140px;
+  }
+}
+.fixed-header .main-logo {
+  display: none;
+  width: 180px;
 }
 .fixed-header .download-btn {
   background-color: #000;
@@ -1238,9 +1253,6 @@ html[dir=rtl] .input[type=tel] {
 }
 .fixed-header .download-btn.btn-hover::before {
   background-color: #ed348c;
-}
-.fixed-header .language {
-  background-color: rgba(0, 0, 0, 0.4);
 }
 .fixed-header .language:hover {
   background-color: transparent;
@@ -1268,6 +1280,9 @@ html[dir=rtl] .input[type=tel] {
 html[dir=ltr] .banner-desc .main-title {
   line-height: 1.2;
 }
+html[dir=ltr] .banner-desc {
+  max-width: 660px;
+}
 html[dir=ltr] .stat-item {
   justify-content: flex-start;
   gap: 10px;
@@ -1285,8 +1300,5 @@ html[dir=ltr] .stat-item .text {
   }
   html[dir=ltr] .advantage-item .title-desc {
     line-height: 1.5;
-  }
-  html[dir=ltr] .tasawk {
-    font-size: 14px;
   }
 }/*# sourceMappingURL=main.css.map */
