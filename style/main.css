@@ -1,7 +1,7 @@
 @font-face {
   font-family: "SF Arabic";
   src: url("../fonts/SFArabic/SFArabic-Regular.woff2") format("woff2"), url("../fonts/SFArabic/SFArabic-Regular.woff") format("woff"), url("../fonts/SFArabic/SFArabic-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -880,6 +880,13 @@ html[dir=rtl] .language {
     padding-inline: 0;
   }
 }
+@media only screen and (max-width: 767px) {
+  .stats-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
 
 .stat-item {
   width: 250px;
@@ -900,8 +907,8 @@ html[dir=rtl] .language {
 }
 @media only screen and (max-width: 767px) {
   .stat-item {
-    width: 235px;
-    min-height: 135px;
+    width: 100%;
+    min-height: 120px;
     gap: 5px;
   }
 }
@@ -941,7 +948,7 @@ html[dir=rtl] .language {
 }
 @media only screen and (max-width: 767px) {
   .stat-item .number {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 .stat-item .text {
@@ -953,7 +960,7 @@ html[dir=rtl] .language {
 }
 @media only screen and (max-width: 767px) {
   .stat-item .text {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -1269,6 +1276,13 @@ html[dir=ltr] .stat-item .text {
   line-height: 1.1;
 }
 @media only screen and (max-width: 767px) {
+  html[dir=ltr] .stat-item {
+    padding-inline: 10px;
+  }
+  html[dir=ltr] .stat-item .text {
+    line-height: 1.2;
+    font-size: 18px;
+  }
   html[dir=ltr] .advantage-item .title-desc {
     line-height: 1.5;
   }
