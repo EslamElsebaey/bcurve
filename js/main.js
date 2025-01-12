@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const scrollPosition = window.scrollY;
       if (scrollPosition > sectionOffsetTop - windowHeight) {
         const numberElements = document.querySelectorAll(".stat-item .number");
-        const interval = 3000;
+        const interval = 2500;
         numberElements.forEach((numberElement) => {
           if (numberElement.textContent == 0) {
             let startValue = 0;
